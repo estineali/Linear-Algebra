@@ -89,6 +89,9 @@ row echelon form?
 
 
 \item For which right sides are these systems solvable? Give your reasons
+
+For all $\vec b$ in the $C(\mat A)$, there exists a solution for the system
+
 \begin{enumerate}
 \item
 \[ 
@@ -111,7 +114,7 @@ x_3
 \end{array} \right]
 \]
 
-For all $\vec b$ in the $C(A)$, there exists a solution for the system.Applying row operations on $\mat A$: 
+Applying row operations on $\mat A$: 
 
 \begin{center}
 $-2R_1 + R_2$
@@ -138,9 +141,9 @@ $ R_2 \leftrightarrow R_3$
 \end{array} \right]
 \]
 
-$\vec a_1$ and $\vec a_3$ are linearly independent and their span is the $C(A)$ hence 
+$\vec a_1$ and $\vec a_3$ are linearly independent and their span is the $C(\mat A)$ hence 
 
-$\forall \vec b \in C(A)$  the system is solvable.
+$\forall \vec b \in C(\mat A)$  the system is solvable.
 
 
 \item
@@ -162,6 +165,30 @@ $\forall \vec b \in C(A)$  the system is solvable.
  b_3 
 \end{array} \right]
 \]
+
+Applying row operations on $\mat A$
+
+\begin{center}
+	
+$R_1 + R_3$
+
+$-2R_1 + R_2$
+
+$-4R_2 + R_1$
+
+$
+\begin{bmatrix}
+1 & 0 \\ 
+0 & 1 \\
+0 & 0
+\end{bmatrix}
+$	
+\end{center}
+
+$\forall \vec b$ where $\vec b$ is the linear combination of the two columns of  $\mat A$, the system is solvable.
+
+So speaking in terms of the cartesian coordinate system, all vectors lying on the $xy$ plane, with $z$ component zero.
+
 \item 
 \[ 
 \left[ \begin{array}{ccc}
