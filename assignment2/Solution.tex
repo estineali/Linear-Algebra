@@ -112,18 +112,15 @@ The last column can be written as a linear combination of the other 3 vectors, i
 
 \end{enumerate}
 
-
-
-\item Suppose $\mat A = \begin{bmatrix} 
+\item $\mat A = \begin{bmatrix} 
     3 & 6 & 9 \\ 
     6 & 9 & 12 \\
     9 & 12 & 15 \end{bmatrix}$
-    \begin{itemize}
-      \item Find $N(\mat A)$
-      
-      Perform the following row operations: 
-
-	\begin{center}
+    
+     \begin{enumerate}[(a)]
+         \item To find $N(\mat A)$, we must reduce $\mat{A}$ to reduced row echelon form (\textbf{RREF}). The following row operations are performed:
+         
+         	\begin{center}
 	$-2R_1 + R_2 $
 
 	$-\frac{1}{3}R_2$
@@ -140,11 +137,14 @@ The last column can be written as a linear combination of the other 3 vectors, i
 
 	We get the following matrix in \textbf{RREF}:
 	
+	\begin{center}
 	$\mat A = \begin{bmatrix} 
 	    1 & 0 & -1 \\ 
 	    0 & 1 & 2 \\
 	    0 & 0 & 0 \\
 	    \end{bmatrix}$
+	\end{center}
+
 	
 	From the above matrix, we can see that we have one free variable, $x_3$. The rank of $\mat{A}$ is 2. This means that the dimension of the null space (the nullity) of our vector space will be 1, as the \textit{rank-nullity theorem} implies that:
 	
@@ -173,39 +173,26 @@ The last column can be written as a linear combination of the other 3 vectors, i
 		\end{bmatrix}
 	\end{equation*}
 	
-	Thus vector $\vec{x}$ will be the vector that spans the nullspace. Intuitively, the solution looks like a point in $\mathds{R}^3$.
-	
-	
-	      \item $\mat B = \begin{bmatrix} 1 & -1 \\ -1 & 1 \end{bmatrix}$. Find $N(\mat B)$ and $N(\mat B^2)$
+	Thus vector $\vec{x}$ will be the vector that spans the null space. Intuitively, the solution looks like a point in $\mathds{R}^3$.
+      
+	      \item $\mat B = \begin{bmatrix} 1 & -1 \\ -1 & 1 \end{bmatrix}$
 	      
-	      To solve for $ N(\mat B) $, we must solve for $\mat{A}\textbf{x} = \vec{0}$.
+	      To solve for $N(\mat{B})$, we must solve for $\mat{B}\textbf{x} = \vec_{0}$.
 	      
-	      Here, $\mat{B}$ is already in \textbf{RREF}. We can thus use the following relation implied from the \textit{rank-nullity theorem} to intuitively fidn out what the null-space should look like:
+	      Here, $\mat{B}$ is already in \textbf{RREF}. We can thus use the following relation implied from the \textit{rank-nullity theorem} to intuitively find out what the null-space should look like:
 	      
 	      \begin{equation*}
 	      	rank(\mat{B}) = dim(\mat{B}) \iff nullity(B) = 0
 	      \end{equation*}
 	      
-	     This means that this equation has only the trivial solution in $N(\mat{A})$, which is the $\vec{0}$ vector.
+	     This means that this equation has only the trivial solution in $N(\mat{B})$, which is the $\vec{0}$ vector.
 	     
-	     Therefore,
+	     Similarly, to solve for $N(\mat{B}^2)$, we must solve for $\mat{B}^2 \textbf{x} = \vec_{0}$.
 	     
-	     \begin{equation*}
-	     	N(\mat{A}) = \emptyset \\ 
-	     \end{equation*}
-	      
-	      \item What can you say about the relationship between $N(\mat C)$ and $N(\mat C^2)$. Assume for this part that $\mat C$ can be any arbitrary square matrix
-	      
-	      \begin{equation*}
-	        N(\mat C) = N(\mat C^2) \\
-	      \end{equation*}
-	      
-	    \end{itemize}
-	    
-	    We can first establish this independently for $\mat{C}$. Compute $\mat{C}^2$ as follows:
-	    
+	     First, we compute $\mat{B}^2$:
+
 	    \begin{center}
-	        $$\mat{C}^2 = 
+	        $$\mat{B}^2 = 
 	        \begin{bmatrix}
 	        1 & -1 \\
 	        -1 & 1 \\
@@ -221,13 +208,81 @@ The last column can be written as a linear combination of the other 3 vectors, i
 	        \end{bmatrix}$$
 	    \end{center}
 	    
-	    By re-writing $\mat{C}^2$ in \textbf{RREF}, we can see that it is row equivalent to $\mat{C}$. That is, the row operations $\frac{1}{2}R_1$ and $\frac{1}{2}R_2$ reduce $\mat{C}^2$ to $\mat{C}$.
+	    By re-writing $\mat{B}^2$ in \textbf{RREF}, we can see that it is row equivalent to $\mat{B}$. That is, the row operations $\frac{1}{2}R_1$ and $\frac{1}{2}R_2$ reduce $\mat{B}^2$ to $\mat{B}$.
 	    
-	    Thus, as the two matrices are row-equivalent,
+	    Thus, as the two matrices are row-equivalent and have $rank = 0$:
 	    
 	    \begin{equation*}
-	        N(\mat{C}) = N(\mat C^2)
+	        N(\mat{C}) = N(\mat C^2) = \emptyset
 	    \end{equation*}
+	     
+	      \item Assume for this part that $\mat C$ can be any arbitrary square matrix
+	    
+	    Suppose we have an arbitrary $m \times n$ matrix $\mat{C}$ such that:
+	    
+	    \begin{equation*}
+	        \mat{C} =
+	        \begin{bmatrix}
+	        c_{1,1} & c_{1,2} & \cdots & c_{1,n}\\
+	        c_{2,1} & c_{2,2} & \cdots & c_{2,n} \\
+	        \vdots & \vdots & \ddots & \vdots \\
+	        c_{m,1} & c_{m,2} & \cdots & c_{m,n} \\
+	        \end{bmatrix}
+	    \end{equation*}
+	    
+	    \begin{equation*}
+	        \mat{C}^2 =
+	        \begin{bmatrix}
+	        0 & 0 & \cdots & 0 \\
+	        0 & 0 & \cdots & 0 \\
+	        \vdots & \vdots & \ddots & \vdots \\
+	        0 & 0 & \cdots & 0 \\
+	        \end{bmatrix}
+	    \end{equation*}
+	    
+	    That is, the matrix $\mat{C}$ with dimensions $m \times n$ such that $\mat{C}^2 = \mat{0}_{m,n}$, the zero matrix with dimensions $m \times n$, and $\mat{C} \neq \mat{0}_{m,n}$.
+	    
+	    If such a matrix exists, then from \textit{theorem (1)} we can deduce that
+	    \begin{center}
+	     $nullity(\mat{C}^2) = n$ \\
+	     $nullity(\mat{C}) < n$ \\
+	    \end{center}
+	   
+	   In other words, $N(\mat{C})$ would have non-trivial solutions, but $N(\mat{C}^2)$ would span all of $\mathbb{R}^n$. Note here that $N(\mat{C}) \neq N(\mat{C}^2)$, as the only way $N(\mat{C})$ can span all of $\mathbb{R}^n$ is if $\mat{C}$ has $rank = 0$ (no pivot columns), which is only possible when $\mat{C}$ is the zero matrix, and we have already stated cannot be the case.
+	    
+	    So such matrices $\mat{C}$ would have at least $rank = 1$ (one pivot column), and thus we have:
+	    
+	    \begin{equation*}
+	        nullity(\mat{C}) < nullity(\mat{C}^2)
+	    \end{equation*}
+	    
+	    If we can provide one example of such a matrix that exists, we can prove that not all matrices have $nullity(\mat{C}) = nullity(\mat{C}^2)$.
+	    
+	    An example of one such matrix is the matrix and it's square:
+	    
+	    \begin{equation*}
+	        \mat{D} = 
+	        \begin{bmatrix}
+	            0 & 0 \\
+	            0 & 1 \\
+	        \end{bmatrix}
+	    \end{equation*}
+	 
+	    \begin{equation*}
+	        \mat{D}^2 = 
+	        \begin{bmatrix}
+	            0 & 0 \\
+	            0 & 0 \\
+	        \end{bmatrix}
+	    \end{equation*}
+	    
+	    Thus, we conclude that unless $\mat{C}^2$ is row equivalent to $\mat{C}$,
+	    
+	    \begin{equation*}
+            N(\mat{C}) \neq N(\mat{C}^2)
+	    \end{equation*}
+	    
+	    \end{enumerate}
     
 \item A linear system $\mat A \vec x = \vec b$ has special solution of the form
 \begin{align}
