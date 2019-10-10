@@ -120,9 +120,51 @@ The last collumn can be written as a linear combination of the other 3 vectors, 
     9 & 12 & 15 \end{bmatrix}$
     \begin{itemize}
       \item Find $N(\mat A)$
-      \item $\mat B = \begin{bmatrix} 1 & -1 \\ -1 & 1 \end{bmatrix}$. Find $N(\mat B)$ and $N(\mat B^2)$
-      \item What can you say about the relationship between $N(\mat C)$ and $N(\mat C^2)$. Assume for this part that $\mat C$ can be any arbitrary square matrix
-    \end{itemize}
+      
+      Perform the following row operations: 
+
+	\begin{center}
+	$-2R_1 + R_2 $
+
+	$-\frac{1}{3}R_2$
+
+	$-3R1 + R3$
+
+	$6R_2 + R3$
+
+	$-6R2 + R1$
+
+	$\frac{1}{3}R_1$
+
+	\end{center}
+
+	We get the following matrix in RREF:
+	
+	$\mat A = \begin{bmatrix} 
+	    1 & 0 & -1 \\ 
+	    0 & 1 & 2 \\
+	    0 & 0 & 0 \\
+	    \end{bmatrix}$
+	
+	From the above matrix, we can see that we have one free variable, $x_3$. The rank of $\mat{A}$ is 2. This means that the dimension of the nullspace (the nullity) of our vector space will be 1, as the \textit{rank-nullity theorem} implies that:
+	
+	\begin{equation}
+		rank(\mat{A}) + nullity(\mat{A}) = n
+	\end{equation}
+
+	Where $n$ is the dimension of the matrix (the number of columns), $rank(\mat{A})$ is the number of $pivots$ in the matrix, and $nullity(\mat{A})$ is the dimension of $N(\mat A)$ (or the number of vectors that span the column).
+	
+	We thus have the following sets of equations for the free variable $x_3$:
+	
+	\begin{center}
+		$x_1 = -x_3$ \\
+		$x_2 = -2x_3$ \\
+		$x_3 = x_3$ \\
+	\end{center}
+	
+	      \item $\mat B = \begin{bmatrix} 1 & -1 \\ -1 & 1 \end{bmatrix}$. Find $N(\mat B)$ and $N(\mat B^2)$
+	      \item What can you say about the relationship between $N(\mat C)$ and $N(\mat C^2)$. Assume for this part that $\mat C$ can be any arbitrary square matrix
+	    \end{itemize}
     
 \item A linear system $\mat A \vec x = \vec b$ has special solution of the form
 \begin{align}
