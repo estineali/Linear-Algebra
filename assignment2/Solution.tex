@@ -290,9 +290,51 @@ The last column can be written as a linear combination of the other 3 vectors, i
  \end{align} 
 \begin{enumerate}[label=(\alph*)]
 \item What are the basis for $N(\mat A)$
+	
+	$N(\mat A) = span \{ \begin{bmatrix} 1 \\ 1 \\ 0 \\ 0 \end{bmatrix} \}$
+	
+	basis for $N(\mat A): \begin{bmatrix} 1 \\ 1 \\ 0 \\ 0 \end{bmatrix}$
+
 \item What is the dimension of $N(\mat A)$
+
+	$\mat A$ wil have to be a 4x4 matrix. If $x_2$ is a free variable then the rank of the matrix is 3.
+	
+	The dimensions of $N(A)$ is the dimension of the matrix - the rank of the matrix.
+	
+	dim of $N(A) = 4 - 3$
+	
+	dim of $N(A) = 1$
+	
+	
 \item Write the reduced row echelon form for $\mat A$
+	
+	The matrix would simply be the Identity matrix with no pivot in the 2nd column. 	
+	
+	$ \mat A = 
+	\begin{bmatrix}
+	\vec a_1 & \vec a_2 & \vec a_3 & \vec a_4
+	\end{bmatrix}
+	$
+	
+	$\mat A \begin{bmatrix} 1 \\ 1 \\ 0 \\ 0 \end{bmatrix}= \vec 0$
+	
+	$\vec a_1 = - \vec a_2 $
+	
+	$ \mat A = 
+	\begin{bmatrix}
+		1 & -1 & 0 & 0 \\
+		0 & 0 & 0 & 0 \\
+		0 & 0 & 1 & 0 \\
+		0 & 0 & 0 & 1
+	\end{bmatrix}
+	$
+	
 \item Describe intuitively the geometry of the solution space
+
+	$\mat A$ has 3 independent vectors and it is in $\mathds{R}^4$.
+	
+	The solution space will be a plane in $\mathds{R}^3$ 
+
 \end{enumerate}
 
 \item Determine with reason which of the following are sub spaces of $3 \times 3$ matrix $\mat M$
