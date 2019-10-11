@@ -337,9 +337,57 @@ The last column can be written as a linear combination of the other 3 vectors, i
 
 \end{enumerate}
 
-\item Determine with reason which of the following are sub spaces of $3 \times 3$ matrix $\mat M$
+\item In this question, we assume that $\mat{M}$ can be an arbitrary $3 \times 3$ matrix. So, as our general matrix we have:
+
+\begin{equation*}
+    \mat{M} = 
+    \begin{bmatrix}
+    m_{1,1} & m_{1,2} & m_{1,3} \\
+    m_{2,1} & m_{2,2} & m_{2,3} \\
+    m_{3,1} & m_{3,2} & m_{3,3} \\
+    \end{bmatrix}
+\end{equation*}
+
+To determine whether any space \textit{W} is the subspace of an arbitrary vector space \textit{V}, the following conditions must hold:
+
+
+    1. If $a \in W$ and $b \in W$, then $(a+b) \in W$ \\
+    2. If $\alpha \in \mathbb{F}$ and $x \in W$, then $\alpha x \in W$ \\
+    3. $W \neq \emptyset$
+
+Where $\mathbb{F}$ is any field with scalars.\cite{SubSpaces}
+
 \begin{enumerate}[label=(\alph*)]
-\item all $3 \times 3$ matrices $\mat A$ such that $\mat A^T = -\mat A$
+\item Considering the case of all $3 \times 3$ matrices $\mat A$ such that $\mat A^T = -\mat A$, we have matrices of the form $\begin{bmatrix}
+0 & 1 & 0 \\
+-1 & 0 & -1 \\
+0 & 1 & 0 \\
+\end{bmatrix}$
+
+Since we are asked to solve for all such $3 \times 3$ matrices $\mat{A}$ such that $\mat A^T = -\mat A$, we have matrices of the form:
+    \begin{center}
+    $\begin{bmatrix}
+    0 & -1 & 0 \\
+    1 & 0 & 1 \\
+    0 & -1 & 0 \\
+    \end{bmatrix}$,
+    $\begin{bmatrix}
+    0 & -1 & 0 \\
+    1 & 0 & 0 \\
+    0 & 0 & 0 \\
+    \end{bmatrix}$,
+        $\begin{bmatrix}
+    0 & 0 & 0 \\
+    0 & 0 & 1 \\
+    0 & -1 & 0 \\
+    \end{bmatrix}$,
+        \end{center}
+    
+    Or some permutation of the above matrices with inverted positive and negative signs.
+    
+    It is given that the subspace of all such matrices $3 \times 3$ $\mat{A}$ will be non-empty. Also, coniditions $1$ and $2$ hold, as all matrices of the above form are closed under scalar multiplication and addition.
+    
+    Therefore, this forms a valid subspace of $\mat{M}$.
 \item all $3 \times 3$ matrices such that the linear system $\mat A \vec x = \vec 0$ has only trivial solution
 \end{enumerate}
 
@@ -973,6 +1021,11 @@ By rewriting the above equations in vector form, we get:
 		https://ocw.mit.edu/courses/mathematics/18-06sc-linear-algebra-fall-2011/
 ax-b-and-the-four-subspaces/solving-ax-0-pivot-variables-special-solutions
 /MIT18_06SCF11_Ses1.7sum.pdf
+        \end{verbatim}
+    \bibitem{SubSpaces}
+    Vector Spaces and Sub Spaces
+        \begin{verbatim}
+http://linear.ups.edu/html/section-S.html
 		\end{verbatim}
 		
 	\bibitem{missjameel}
