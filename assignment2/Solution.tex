@@ -512,7 +512,7 @@ If we add $\vec{a_4} = \begin{bmatrix}
 0 \\
 0 \\
 1 \\
-\end{bmatrix}$, $C(\mat{A})$ gets larger as $\vec{a_4}$ is linearly independent from the first three columns. As $\vec{a_4}$ is a pivot column, $C(\mat{A})$ will also have $\vec{a_4}$ spanning its bases in this case.
+\end{bmatrix}$, $C(\mat{A})$ gets larger as $\vec{a_4}$ is linearly independent from the first three columns. As $\vec{a_4}$ is a pivot column, $C(\mat{A})$ will also have $\vec{a_4}$ as one of its bases in this case.
 
 On the other hand, if we add $\vec{a_4} = \begin{bmatrix}
 1 \\
@@ -521,7 +521,7 @@ On the other hand, if we add $\vec{a_4} = \begin{bmatrix}
 0 \\
 \end{bmatrix}$, $C(\mat{A})$ does not get larger. This is because $\vec{a_4}$ is not linearly independent from the first three columns, as a linear combination of the other columns can produce $\vec{a_4}$. So in this case the column space stays the same.
 
-For a solution to exist, the vector $\vec{A}$ must not lie in $N(\mat{A})$, but must be in the column space of $\mat{A}$. This is because when the column space does not increase, the null space increases. Hence for the solution to exist, the vector $\vec{b}$ must not lie in $N(\mat{A})$, but be in the $C(\mat{A})$ (other than the $\vec{0}$ vector).
+For a solution to exist, the vector $\vec b$ must not lie in $N(\mat{A})$, but must be in the column space of $\mat{A}$. This is because when the column space does not increase, the null space increases on the addition of a column. Hence for the solution to exist, the vector $\vec{b}$ must not lie in $N(\mat{A})$, but be in the $C(\mat{A})$ (other than the $\vec{0}$ vector).
 
 \item We begin by making a matrix of all of these vectors. 
 
