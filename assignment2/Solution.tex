@@ -840,7 +840,49 @@ Rewriting the above equations in vector form, we have
 
 \item If $\mat V$ is the subspace spanned by (1, 1, 1) and (2, 1, 0), find a matrix $\mat A$ that has $\mat V$ as its column space and a matrix $\mat B$ that has $\mat V$ as its null space.
 
+The column space of a matrix is simply the vector space spanned  by the column vectors of the matrix.
 
+Let $\mat A = $
+$
+\begin{bmatrix}
+1 & 2 \\
+1 & 1 \\
+1 & 0
+\end{bmatrix}
+$
+ 
+And $C(A) = span\{\vec a_1, \vec a_2\}$
+ 
+ Let $\mat B$ be a nx3 matrix such that 
+  
+$\mat B \begin{bmatrix}1 \\ 1 \\ 1\end{bmatrix} = 0$
+
+$\mat B \begin{bmatrix}2 \\ 1 \\ 0\end{bmatrix} = 0$
+ 
+$\begin{bmatrix} \vec b_1 & \vec b_2 & \vec b_3 \end{bmatrix} \begin{bmatrix}1 \\ 1 \\ 1\end{bmatrix} = 0$
+
+$\begin{bmatrix} \vec b_1 & \vec b_2 & \vec b_3 \end{bmatrix} \begin{bmatrix}2 \\ 1 \\ 0\end{bmatrix} = 0$
+ 
+$\vec b_1 + \vec b_2 + \vec b_3 = 0$
+
+$2\vec b_1 + \vec b_2 = 0$
+
+$\vec b_2 = -2\vec b_1$
+
+$\vec b_1 - 2 \vec b_1 + \vec b_3 = 0$
+
+$\vec b_3 = \vec b_1$
+
+So any matrix of the form 
+$\mat B = $
+$
+\begin{bmatrix}
+	\vec b_1 & -2\vec b_1 & \vec b_1
+\end{bmatrix}
+$
+will have $V$ as its nullspace.
+
+Particular example can be the row matrix $\mat B = \begin{bmatrix} 1 & -2 & 1 \end{bmatrix}$
 \item We have the following equations:
 
 \begin{equation} \label{eq1}
