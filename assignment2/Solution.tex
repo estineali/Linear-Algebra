@@ -117,7 +117,7 @@ The last column can be written as a linear combination of the other 3 vectors, i
     6 & 9 & 12 \\
     9 & 12 & 15 \end{bmatrix}$
     
-     \begin{enumerate}[(a)]
+     \begin{enumerate}[label=\alph*]
          \item To find $N(\mat A)$, we must reduce $\mat{A}$ to reduced row echelon form (\textbf{RREF}). The following row operations are performed:
          
          	\begin{center}
@@ -177,7 +177,7 @@ The last column can be written as a linear combination of the other 3 vectors, i
       
 	      \item $\mat B = \begin{bmatrix} 1 & -1 \\ -1 & 1 \end{bmatrix}$
 	      
-	      To solve for $N(\mat{B})$, we must solve for $\mat{B}\textbf{x} = \vec_{0}$.
+	      To solve for $N(\mat{B})$, we must solve for $\mat{B}\textbf{x} = \vec{0}$.
 	      
 	      Here, $\mat{B}$ is already in \textbf{RREF}. We can thus use the following relation implied from the \textit{rank-nullity theorem} to intuitively find out what the null-space should look like:
 	      
@@ -187,7 +187,7 @@ The last column can be written as a linear combination of the other 3 vectors, i
 	      
 	     This means that this equation has only the trivial solution in $N(\mat{B})$, which is the $\vec{0}$ vector.
 	     
-	     Similarly, to solve for $N(\mat{B}^2)$, we must solve for $\mat{B}^2 \textbf{x} = \vec_{0}$.
+	     Similarly, to solve for $N(\mat{B}^2)$, we must solve for $\mat{B}^2 \textbf{x} = \vec{0}$.
 	     
 	     First, we compute $\mat{B}^2$:
 
