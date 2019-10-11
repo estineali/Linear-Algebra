@@ -557,6 +557,258 @@ Out of these we can see $\vec v_1, \vec v_4, \vec v_6,$ and $\vec v_5$ to be lin
 2&5&8
 \end{array} \right]\]
 
+First we rewrite $\mat{A}$ in \textbf{RREF}. The row operation, $-R_1 + R_2$, gives us the following matrix:
+
+\begin{equation*}
+    \mat{A} = 
+    \begin{bmatrix}
+    1 & 2 & 4 \\
+    0 & 0 & 0 \\
+    \end{bmatrix}
+\end{equation*}
+
+The only pivot variable we have is the first column, $\begin{bmatrix}
+1 \\
+0 \\
+\end{bmatrix}$. As a consequence of \textit{theorem (1)}, $rank(A) = 1$ and $nullity(A) = 2$, as 
+
+\begin{equation*}
+    rank(A) + nullity(A) = 3 = n
+\end{equation*}
+
+Therefore, the basis vector for $C(\mat{A})$ is $\begin{bmatrix}
+1 \\
+0 \\
+\end{bmatrix}$.
+
+To find the bases for $N(\mat{A})$, rewrite the equations as follows:
+\begin{center}
+    $x_1 + 2x_2 + 4x_3 = 0$\\
+    $x_2 = x_2$ \\
+    $x_3 = x_3$ \\
+\end{center}
+
+Set $x_2 = 1$ and $x_3 = 0$:
+
+\begin{center}
+    $x_1  = -2$ \\
+    $x_2 = 1$ \\
+    $x_3 = 0$ \\
+\end{center}
+
+Set $x_2 = 0$ and $x_3 = 1$:
+
+\begin{center}
+    $x_1 = -4$
+    $x_2 = 0$
+    $x_3 = 1$
+\end{center}
+
+Rewriting the above equations in vector form, we have
+
+\begin{equation*}
+    N(\mat{A}) = x_2 
+    \begin{bmatrix}
+    -2 \\
+    1 \\
+    0 \\
+    \end{bmatrix},
+    x_3
+    \begin{bmatrix}
+    -4 \\
+    0 \\
+    1 \\
+    \end{bmatrix}
+\end{equation*}
+
+Similarly, we rewrite $\mat{B}$ in \textbf{RREF}. Perform the following row operations:
+
+\begin{center}
+	$-2R_1 + R_2$ \\
+	$-2R2 + R_1$ \\
+\end{center}
+
+We thus end up with the following matrix:
+
+\begin{center}
+	\begin{bmatrix}
+	1 & 0 & 4 \\
+	0 & 1 & 0 \\
+	\begin{bmatrix}
+\begin{center}
+
+The two pivots here are the first and second column vectors, $\begin{bmatrix}
+1 \\
+0 \\
+\end{bmatrix}$ and $\begin{bmatrix}
+0 \\
+1 \\
+\end{bmatrix}$, respectively. As a consequence of \textit{theorem (1)}, $rank(B) = 2$ and $nullity(A) = 1$, as 
+
+\begin{equation*}
+    rank(A) + nullity(A) = 3 = n
+\end{equation*}
+
+Therefore, the bases for $C(\mat{B})$ are $\begin{bmatrix}
+1 \\
+0 \\
+\end{bmatrix}$, $\begin{bmatrix}
+0 \\
+1 \\
+\end{bmatrix}$, which are both linearly independent columns.
+
+To find the bases for $N(\mat{B})$, rewrite the equations as follows:
+\begin{center}
+    $x_1 + 0 + 4x_3 = 0$ \\
+    $x_2 = 1 \\
+    $x_3 = x_3$ \\
+\end{center}
+
+Set $x_3 = 1$:
+
+\begin{center}
+    $x_1  = -4$ \\
+    $x_2 = 1$ \\
+    $x_3 = 1$ \\
+\end{center}
+
+
+Rewriting the above equations in vector form, we have
+
+\begin{equation*}
+    N(\mat{A}) = x_2 
+    \begin{bmatrix}
+    -4 \\
+    1 \\
+    1 \\
+    \end{bmatrix}
+\end{equation*}First we rewrite $\mat{A}$ in \textbf{RREF}. The row operation, $-R_1 + R_2$, gives us the following matrix:
+
+\begin{equation*}
+    \mat{A} = 
+    \begin{bmatrix}
+    1 & 2 & 4 \\
+    0 & 0 & 0 \\
+    \end{bmatrix}
+\end{equation*}
+
+The only pivot variable we have is the first column, $\begin{bmatrix}
+1 \\
+0 \\
+\end{bmatrix}$. As a consequence of \textit{theorem (1)}, $rank(A) = 1$ and $nullity(A) = 2$, as 
+
+\begin{equation*}
+    rank(A) + nullity(A) = 3 = n
+\end{equation*}
+
+Therefore, the basis vector for $C(\mat{A})$ is $\begin{bmatrix}
+1 \\
+0 \\
+\end{bmatrix}$.
+
+To find the bases for $N(\mat{A})$, rewrite the equations as follows:
+\begin{center}
+    $x_1 + 2x_2 + 4x_3 = 0$\\
+    $x_2 = x_2$ \\
+    $x_3 = x_3$ \\
+\end{center}
+
+Set $x_2 = 1$ and $x_3 = 0$:
+
+\begin{center}
+    $x_1  = -2$ \\
+    $x_2 = 1$ \\
+    $x_3 = 0$ \\
+\end{center}
+
+Set $x_2 = 0$ and $x_3 = 1$:
+
+\begin{center}
+    $x_1 = -4$
+    $x_2 = 0$
+    $x_3 = 1$
+\end{center}
+
+Rewriting the above equations in vector form, we have
+
+\begin{equation*}
+    N(\mat{A}) = x_2 
+    \begin{bmatrix}
+    -2 \\
+    1 \\
+    0 \\
+    \end{bmatrix},
+    x_3
+    \begin{bmatrix}
+    -4 \\
+    0 \\
+    1 \\
+    \end{bmatrix}
+\end{equation*}
+
+Similarly, we rewrite $\mat{B}$ in \textbf{RREF}. Perform the following row operations:
+
+\begin{center}
+	$-2R_1 + R_2$ \\
+	$-2R2 + R_1$ \\
+\end{center}
+
+We thus end up with the following matrix:
+
+\begin{center}
+	\begin{bmatrix}
+	1 & 0 & 4 \\
+	0 & 1 & 0 \\
+	\begin{bmatrix}
+\begin{center}
+
+The two pivots here are the first and second column vectors, $\begin{bmatrix}
+1 \\
+0 \\
+\end{bmatrix}$ and $\begin{bmatrix}
+0 \\
+1 \\
+\end{bmatrix}$, respectively. As a consequence of \textit{theorem (1)}, $rank(B) = 2$ and $nullity(A) = 1$, as 
+
+\begin{equation*}
+    rank(A) + nullity(A) = 3 = n
+\end{equation*}
+
+Therefore, the bases for $C(\mat{B})$ are $\begin{bmatrix}
+1 \\
+0 \\
+\end{bmatrix}$, $\begin{bmatrix}
+0 \\
+1 \\
+\end{bmatrix}$, which are both linearly independent columns.
+
+To find the bases for $N(\mat{B})$, rewrite the equations as follows:
+\begin{center}
+    $x_1 + 0 + 4x_3 = 0$ \\
+    $x_2 = 1 \\
+    $x_3 = x_3$ \\
+\end{center}
+
+Set $x_3 = 1$:
+
+\begin{center}
+    $x_1  = -4$ \\
+    $x_2 = 1$ \\
+    $x_3 = 1$ \\
+\end{center}
+
+
+Rewriting the above equations in vector form, we have
+
+\begin{equation*}
+    N(\mat{A}) = x_2 
+    \begin{bmatrix}
+    -4 \\
+    1 \\
+    1 \\
+    \end{bmatrix}
+\end{equation*}
+
 \item If $\mat V$ is the subspace spanned by (1, 1, 1) and (2, 1, 0), find a matrix $\mat A$ that has $\mat V$ as its column space and a matrix $\mat B$ that has $\mat V$ as its null space.
 
 
