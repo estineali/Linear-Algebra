@@ -1,8 +1,8 @@
 ## Assignment 3
 
-	1. Muhammad Shahrom Ali - Questions x, y, z
-	2. Muhammad Shahzain - Questions x, y, z
-	3. Syed Ammar Mahdi - Questions x, y z
+	1. Muhammad Shahrom Ali - Questions 2, 3, 4
+	2. Muhammad Shahzain - Questions 8, 9, 10
+	3. Syed Ammar Mahdi - Questions 5, 6, 7
 
 	Bonus Question: Question 1. Eet eez dun. 
 
