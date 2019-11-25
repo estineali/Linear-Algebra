@@ -1,8 +1,8 @@
 ## Assignment 4
 
-	1. Muhammad Shahrom Ali - Questions x, y, z
-	2. Muhammad Shahzain - Questions x, y, z
-	3. Syed Ammar Mahdi - Questions x, y, z
+	1. Muhammad Shahrom Ali - Questions x, y
+	2. Muhammad Shahzain - Questions x, y
+	3. Syed Ammar Mahdi - Questions x, y
 
 	Bonus Question: Question 1. Pending 
 
