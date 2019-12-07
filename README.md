@@ -1,6 +1,6 @@
 # MATH 205 - Linear Algebra
-# FALL 2019
-# Habib University 
+**FALL 2019**
+**Habib University** 
 
 Assignments Repository 
 
