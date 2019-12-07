@@ -1,6 +1,6 @@
 %%This is a very basic article template.
 %%There is just one section and two subsections.
-\documentclass[a4paper, 11pt]{article}
+\documentclass[answers, a4paper, 11pt]{exam}
 \usepackage[pdftex]{graphicx}
 \usepackage{parskip}
 \usepackage{hyperref}
@@ -38,20 +38,132 @@ g(x,y) &= (x^2 - 2x)\cos y
 Determine whether $(0, 0)$ and $(1, \pi)$ is the stationary point for $f(x,y)$ and $g(x,y)$ respectively. If they are the stationary points, then determine the nature of the stationary points
 
 %Q1
-\textbf{Solution:}
+\begin{solution}
+
+$f_x(x,y) = 4e{x} - 4 - 5\sin{y}$
+
+$f_y(x,y) = -5x\cos{y} + 12y$
+
+$f_{xx}(x,y) = 4e^x$
+
+$f_{xy}(x,y) = -5cosy$
+
+$f_{yy}(x,y) = 5x\sin{y} + 12$
+
+Hessian $\mat A = 
+\begin{bmatrix}
+f_{xx} & f_{xy} \\ f_{yx} & f_{yy}
+\end{bmatrix}
+$
+
+at $(0,0)$
+
+$f_x(x,y) = 4e{0} - 4 - 5\sin{0} = 0$
+
+$f_y(x,y) = -50\cos{0} + 120 = 0$
+
+Stationary point exists.
+
+$\mat A = 
+\begin{bmatrix}
+4 & -5 \\ -5 & 12
+\end{bmatrix}
+$
+
+$det(\mat A) = 73$
+
+Minimum Point.
+
+$g_x(x,y) = 2x\cos{y} - 2\cos{y}$
+
+$g_y(x,y) = -x^2\sin{y} + 2x\sin{y}$
+
+$g_{xx}(x,y) = 2\cos{y}$
+
+$g_{xy}(x,y) = 2\sin{y} - 2x\sin{y}$
+
+$g_{yy}(x,y) = 2x\cos{y} - x^2\sin{y}$
+
+Hessian $\mat A = 
+\begin{bmatrix}
+g_{xx} & g_{xy} \\ g_{yx} & g_{yy}
+\end{bmatrix}$
+
+$g_x(x,y) = 2\cos{\pi} - 2\cos{\pi} = 2 - 2 = 0$
+
+$g_y(x,y) = -x^2\sin{\pi} + 2x\sin{i} = 0$
+
+Stationary Point Exists.
+
+at point $(1, \pi)$
+
+Hessian $\mat A = 
+\begin{bmatrix}
+-2 & 0 \\ 0 & -2
+\end{bmatrix}$
+
+$det(\mat A) = 4 - 0 = 4$
+
+Minimum Point. 
+
+\end{solution}
 
 
 
 \item Using the quadratic form $\vec x^T \mat A \vec x$, show that $f(x, y) = x^2 + 4xy + 3y^2$ does not have a minimum at $(0, 0)$
 
 %Q2
-\textbf{Solution:}
+\begin{solution}
+
+$
+\vec{x} = \begin{bmatrix}
+    x & y 
+\end{bmatrix}
+$
+
+$
+\begin{bmatrix}
+    x & y 
+\end{bmatrix} 
+\begin{bmatrix}
+    a & b \\ b & d 
+\end{bmatrix}
+\begin{bmatrix}
+    x \\ y 
+\end{bmatrix}
+$
+
+$ax^2 + bxy + bxy + dy^2$
+
+$ax^2 + 2bxy + dy^2$
+
+$f(x,y) = x^2 + 4xy + 3y^2$
+
+$a = 1 \\ b = \frac{4}{2} = 2 \\ c = 3$
+
+$ \mat A =
+\begin{bmatrix}
+    1 & 2 \\ 2 & 3
+\end{bmatrix}
+$
+
+$det(\mat A) = 3 - 4 = -1$
+
+Negative determinant. Necessary Condition for positive definite violated \cite{MM} hence does not have a minimum at $(0,0)$.
+
+\end{solution}
+
+
+
 
 
 \item Let $\mat A = \begin{bmatrix} 1 & b & 0 \\ c & 4 & 2 \\ 0 & 2 & 4 \end{bmatrix}$. For what values of $b$ and $c$, the matrix will be positive definite and positive semi-definite?
 
 %Q3
-\textbf{Solution:}
+\begin{solution}
+
+
+\end{solution}
 
 
 \item Determine whether the following statements are true or false. You must give counterexamples and/or justifications for your choice
@@ -75,15 +187,54 @@ Determine whether $(0, 0)$ and $(1, \pi)$ is the stationary point for $f(x,y)$ a
         $\mat{AB} - \mat{BA} = \mat{I}$ (where $\mat{I}$ is the identity matrix).
     %Test AM & GM
 	
-\textbf{Solution:}
+    \begin{solution}
+        \begin{itemize}
 
+        \item \textbf{Proof by Counter Example:}
+        \newline
+        \\
+        Let matrix $\mat A = \begin{bmatrix}
+        1 & 2 \\ 3 & 4
+        \end{bmatrix}$ 
+        and matrix $\mat B =  \begin{bmatrix}
+        5 &6 \\ 7 & 8        \end{bmatrix}$\\ 
+        \\
+        \\
+        To check if $ \mat A \mat B - \mat B \mat A  = \begin{bmatrix}
+         19 &22 \\ 43 & 50
+        \end{bmatrix}$ $-$ $\begin{bmatrix}
+         19 &22 \\ 43 & 50
+        \end{bmatrix}$, 
+        We get $\begin{bmatrix}
+         -4 &12 \\ 12 & -4
+        \end{bmatrix}$
+        \\
+        \\
+        \\
+        which is not equal to $\mat I$ Hence disproved!
+    \end{itemize}
+
+    \end{solution}
+    
     \item The matrix 
         $\begin{bmatrix}
         a & b \\
         0 & a
-        \end{bmatrix}$ is diagonalizable 
+        \end{bmatrix}$ is diagonalizable.
 
-	\textbf{Solution:}
+	\begin{solution}
+        \begin{itemize}
+    	    \item
+    	    \textbf{FALSE:}
+    	    We have a vector $\begin{bmatrix}
+	    a- \lambda & b
+	   \\ 0 & a - \lambda	    \end{bmatrix}$
+	   where $\lambda$ are the eigenvalues of the matrix.
+	 Finding eigenvalues using the determinant, we get $(a-\lambda)^2 = 0 $, which yields $\lambda_1 =a $ and $\lambda_2 =a $
+	 which directly means that for the eigen value, Arithmetic multiplicity (A.M) = 2. If we have repeated eigenvalues for a matrix, the matrix is never diagonalizable, as it's Geometric multiplicty, which are the number of unique eigenvectors formed using the eigenvalues, will be 1. \end{itemize}
+
+    \end{solution}
+	
 \end{enumerate}        
 
 \item Let $ \Vec{p}, \Vec{q} \in \mathbb R^{n}$. If $ \mat{A} = \Vec{p} \Vec{q}^{T}$
@@ -92,15 +243,46 @@ Determine whether $(0, 0)$ and $(1, \pi)$ is the stationary point for $f(x,y)$ a
 
 a.) Show that $\Vec{p}$ is an eigenvector and find it's corresponding eigenvalue $\lambda$. 
 
-\textbf{Solution:}
+\begin{solution}
+    Order of $\vec p = 1 \times n$
+
+Order of $\vec q^T = n \times 1$
+
+$\mat A = \vec p \vec q^T = \sum_{i=1}^n p_i q_i$
+
+Order of $\mat A = 1 \times 1 $
+
+A is essentially a scalar. 
+
+$\mat A \vec p = \lambda \vec p$
+
+Since $\mat A$ is a scalar it is directly equal to $\lambda.$ hence $\vec p$ is simply scaled in $\mat A \vec p$ there fore $\vec p$ is an eigenvector. 
+
+$\lambda = \sum_{i=1}^n p_i q_i$ is the corresponding eigenvalue.
+
+\end{solution}
+
+ 
 
 b.) Determine all the other eigenvalues of $\mat{A}$ and explain how you obtained them.
 
-\textbf{Solution:}
+\begin{solution}
+    The matrix is a square matrix with $n = 1$ hence there can be at most 1 eigenvalue which is mentioned in the previous part $\lambda = \sum_{i=1}^n p_i q_i$.
+
+\end{solution} 
+
+
 
 c.) What can you say about the trace of $\mat{A}$?
 
-\textbf{Solution:}
+\begin{solution}
+    The Trace of a matrix $Tr(\mat A) =$sum of all diagonal values. 
+
+Since $\mat A$ is a $1 \times 1$ matrix, $Tr(\mat A) = A_{11} = \sum_{i=1}^n p_i q_i$
+
+\end{solution}
+
+
 
 \item The great barrier reef has been known to include over 1500 species of fish. One particular fish that is indigenous to that area is the clown fish. Data shows that in the first year 4000 clown fish inside the reef migrated to other areas, while 2250 clown fish migrated to the reef. It is estimated that the ratio of clown fish leaving the reef to the population inside the reef is constant. Similarly, the ratio of clown fish entering the reef to the population outside the reef is also constant. With an initial population of 22500 clown fish outside the reef and 20000 clown fish inside the reef, construct a system that is indicative of the number of fish inside (as well as outside) after the end of the first year. 
 
@@ -109,7 +291,38 @@ Will the system ever reach a steady state? If so, approximately how long would i
 You will be given points for clear and concise explanations.
 
 %Q6
-\textbf{Solution:}
+\begin{solution}
+    Since the ratio of clown fish leaving the reef to the population inside the reef and the ratio of clown fish entering the reef to the population outside the reef is constant, we can find these ratios by the values provided. 
+    
+    $\frac{2250}{22500} =  0.1 =$ ratio of fish entering the reef 
+    
+    $\frac{4000}{20000} = 0.2 =$ ratio of fish leaving the reef 
+    
+    The fish remaining in the reef after year 1 would then be $(1 - 0.2) \times 20000$ which is $0.8 \times 20000 = 16000$.
+    
+    Similarly the fish remaining outside the reef after year 1 would be $(1 - 0.1) \times 22500$ which is $0.9 \times 22500 = 20250$
+    
+    We can construct the system such that:
+    $
+    \begin{bmatrix} 0.9 & 0 \\ 0 & 0.8 \end{bmatrix}{}
+    \begin{bmatrix} 22500 \\ 20000 \end{bmatrix}
+    $
+    
+    which is equal to 
+    $
+    \begin{bmatrix}
+    20250 \\ 16000
+    \end{bmatrix}
+    $
+  
+    The System's eigenvalues can be found by $(0.9 - \lambda)(0.8 - \lambda) = 0$ 
+    
+    $\lambda_1 = 0.9 \\ \lambda_2 = 0.8$
+    
+    Both of these are positive so the system is unstable and will reach a steady state at $t = \infty$ (i.e. wont reach a steady state). 
+    
+    The population values will not have an impact on the system becoming steady. 
+\end{solution}
 
 
 \item It just so happens that we have lost all the data that you had submitted for assignment 3. The question now arises as to how we are supposed to grade this assignment. The TAs have suggested that we use a formula where the grade for each assignment (from the third onwards) will be calculated by taking the average of the previous two (i.e. $A_3 = \frac{1}{2}*(A_2+A_1) $.  
@@ -131,15 +344,175 @@ $
 where $k \geq 1$ 
 \newline
 
-\textbf{Solution:}
+\begin{solution}
+
+    $
+\mat{B} \;
+\begin{bmatrix}
+A_{k+1}\\
+A_{k}
+\end{bmatrix} = 
+\begin{bmatrix}
+A_{k+2}\\
+A_{k+1}
+\end{bmatrix}
+$
+
+$A_3 = \frac{1}{2} (A_2 + A_1) 
+= \frac{1}{2} A_2 + \frac{1}{2} A_1$
+
+$A_4 = \frac{1}{2} (A_3 + A_2) 
+= \frac{1}{2} A_3 + \frac{1}{2} A_2$
+
+For $k = 2$
+
+    $
+\mat{B} \;
+\begin{bmatrix}
+A_3\\
+A_{2}
+\end{bmatrix} = 
+\begin{bmatrix}
+A_{4}\\
+A_{3}
+\end{bmatrix}
+$
+
+    $
+\mat{B} \;
+\begin{bmatrix}
+A_3\\
+A_{2}
+\end{bmatrix} = 
+\begin{bmatrix}
+\frac{1}{2} A_3 + \frac{1}{2} A_2 \\
+A_{3}
+\end{bmatrix}
+$
+
+    $
+\begin{bmatrix}
+a & b \\ c & d 
+\end{bmatrix}
+\begin{bmatrix}
+A_3\\
+A_{2}
+\end{bmatrix} = 
+\begin{bmatrix}
+\frac{1}{2} A_3 + \frac{1}{2} A_2 \\
+A_{3}
+\end{bmatrix}
+$
+
+$a A_3 + b A_2 = \frac{1}{2} A_3 + \frac{1}{2} A_2$ 
+
+$a = \frac{1}{2} \\ b = \frac{1}{2}$
+
+$c A_3 + d A_2 = A_3$
+
+$c = 1 \\ d = 0$
+
+$\mat B = 
+\begin{bmatrix}
+\frac{1}{2} & \frac{1}{2} \\ 1 & 0 
+\end{bmatrix}
+$
+\end{solution}
 
 b.) Find the eigenvalues and eigenvectors of $\mat{B}$.
 
-\textbf{Solution:}
+\begin{solution}
+
+$det(\mat B - \lambda \mat I) = 0$
+
+$
+det(\begin{bmatrix}
+\frac{1}{2} - \lambda & \frac{1}{2} \\ 1 & - \lambda 
+\end{bmatrix}) = 0
+$
+
+$-\lambda(\frac{1}{2} - \lambda) - \frac{1}{2} = 0$
+
+$\lambda^2 -\frac{1}{2}\lambda - \frac{1}{2} = 0$
+
+$\lambda_1 = 1 \\ \lambda_2 = -\frac{1}{2}$
+
+For $\lambda_1$
+
+$
+\begin{bmatrix}
+-\frac{1}{2} & \frac{1}{2} \\ 1 & -1 
+\end{bmatrix}
+\begin{bmatrix}
+ x\\ y 
+\end{bmatrix}
+= \begin{bmatrix}
+0 \\ 0
+\end{bmatrix}
+$
+
+$x - y = 0$
+
+$x = y$
+
+$\begin{bmatrix}
+x \\ y 
+\end{bmatrix} = \begin{bmatrix}
+y \\ y 
+\end{bmatrix} = y\begin{bmatrix}
+1 \\ 1 
+\end{bmatrix}$
+
+$\vec v_1 = \begin{bmatrix}
+1 \\ 1 
+\end{bmatrix}$
+
+For $\lambda_2$
+
+$
+\begin{bmatrix}
+1 & \frac{1}{2} \\ 1 & \frac{1}{2} 
+\end{bmatrix}
+\begin{bmatrix}
+x \\ y
+\end{bmatrix}
+= \begin{bmatrix}
+0 \\ 0
+\end{bmatrix}
+$
+
+$x + \frac{1}{2}y = 0$
+
+$x = -\frac{1}{2}y$
+
+$
+\begin{bmatrix}
+x \\ y
+\end{bmatrix} =
+\begin{bmatrix}
+-\frac{1}{2}y \\ y
+\end{bmatrix} = y 
+\begin{bmatrix}
+-\frac{1}{2} \\ 1
+\end{bmatrix}
+$
+
+$\vec   v_2 = 
+\begin{bmatrix}
+-\frac{1}{2} \\ 1
+\end{bmatrix}
+$
+
+
+
+\end{solution}
 
 c.) Find the limit as $n \rightarrow \infty$ of the matrices $\mat{B^n} = S \Lambda ^{n}S^{-1}$.
 
-\textbf{Solution:}
+\begin{solution}
+
+
+\end{solution}
 
 \item
 %Q8
@@ -150,15 +523,24 @@ The figure above shows a room that has been divided into 4 parts u,v,w and x. In
 
 a.) Construct a system that involves the rate of flow into $v$ and the rate of flow into $w$.
 
-\textbf{Solution:}
+\begin{solution}
+
+
+\end{solution}
 
 b.) Determine the rate at which the concentrations decay.
 
-\textbf{Solution:}
+\begin{solution}
+
+
+\end{solution}
 
 c.) What happens to the concentrations as $t \rightarrow \infty$
 
-\textbf{Solution:}
+\begin{solution}
+
+
+\end{solution}
 
 \end{enumerate}
 
@@ -169,6 +551,7 @@ c.) What happens to the concentrations as $t \rightarrow \infty$
 \newpage
 
 \begin{thebibliography}{}
+\bibitem{MM} Dr Musabbir's lecture notes on Eigenvalues. 
 \end{thebibliography}
 
 \end{document}
